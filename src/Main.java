@@ -87,8 +87,7 @@ public class Main {
         if (Files.exists(path)) {
             System.out.println("Exists");
             try {
-//                exchange.getResponseHeaders().add("Content-Type", "text/html; charset=UTF_8");
-                exchange.getResponseHeaders().add("Content-Type", "text/css");
+                exchange.getResponseHeaders().add("Content-Type", "text/css, text/html; charset=UTF_8");
                 int responseCode = 200;
                 String response = readFile(path, StandardCharsets.UTF_8);
                 exchange.sendResponseHeaders(responseCode, response.length());
